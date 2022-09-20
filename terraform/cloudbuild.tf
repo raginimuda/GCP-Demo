@@ -1,5 +1,5 @@
 locals {
-  repo = "github_zhongchen_gcp-demo"
+  repo = "github_raginimuda_gcp-demo"
 }
 resource "google_cloudbuild_trigger" "file_update" {
   description = "trigger for file update"
