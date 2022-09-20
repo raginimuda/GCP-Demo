@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket = "zhong-gcp"
+    bucket = "raginimd28"
     prefix = "terraform/state"
   }
 }
