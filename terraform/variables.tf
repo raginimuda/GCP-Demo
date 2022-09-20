@@ -1,9 +1,9 @@
 variable "project_id" {
   type = string
-  default = "zhong-gcp"
+  default = "triple-team-359223"
 }
 
 variable "region" {
   type = string
-  default = "us-west1"
+  default = "us-west4"
 }
