@@ -7,7 +7,7 @@ terraform {
 
 provider "google" {
   version = "~> 2.20"
-  project = "zhong-gcp"
+  project = "triple-team-359223"
 }
 
 # Use this data source to get project details. For more information see API.
