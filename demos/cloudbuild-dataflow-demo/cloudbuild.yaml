@@ -11,7 +11,7 @@ steps:
 
   - id: "build and submit the dataflow job"
     name: maven:3.6.0-jdk-11-slim
-    dir: 'cloudbuild-dataflow-demo/streaming'
+    dir: '/demos/cloudbuild-dataflow-demo/streaming'
     entrypoint: 'bash'
     args:
       - '-c'
@@ -20,14 +20,14 @@ steps:
         pwd
         echo "Build Number is ${buildNumber}"
         ./submit.sh DataflowDemoPipeline \
-          --project=zhong-gcp \
-          --stagingLocation=gs://zhong-gcp/stage/ \
-          --gcpTempLocation=gs://zhong-gcp/temp/ \
+          --project=triple-team-359223 \
+          --stagingLocation=gs://raginimd28/stage/ \
+          --gcpTempLocation=gs://raginimd28/temp/ \
           --runner=DataflowRunner \
           --autoscalingAlgorithm=THROUGHPUT_BASED \
           --maxNumWorkers=10 \
           --jobName=demo \
           --buildNumber=${buildNumber} \
           --subscription=dataflow_demo_subscription \
-          --region=us-west1
+          --region=us-west4
     waitFor: ['get build number']
