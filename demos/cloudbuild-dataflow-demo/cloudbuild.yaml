@@ -11,13 +11,14 @@ steps:
 
   - id: "build and submit the dataflow job"
     name: maven:3.6.0-jdk-11-slim
-    dir: '/demos/cloudbuild-dataflow-demo/streaming'
+    dir: '/cloudbuild-dataflow-demo/streaming'
     entrypoint: 'bash'
     args:
       - '-c'
       - |
         buildNumber=$(cat _BUILDNUMBER)
         pwd
+        ls
         echo "Build Number is ${buildNumber}"
         ./submit.sh DataflowDemoPipeline \
           --project=triple-team-359223 \
